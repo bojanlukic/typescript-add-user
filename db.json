@@ -8,7 +8,7 @@
       "adress": "Ratka Mitrovica 12",
       "createdDate": "Thursday, 15 September 2022",
       "id": 1,
-      "ModifiedDate": "Monday, 7 November 2022"
+      "ModifiedDate": "Tuesday, 15 November 2022"
     },
     {
       "firstName": "Branka",
@@ -31,13 +31,13 @@
     },
     {
       "firstName": "Bojan",
-      "lastName": "Lukicccc",
+      "lastName": "Lukic",
       "userType": "Unemployed",
       "city": "Beograd",
       "adress": "Vuka Karadzica 65",
       "createdDate": "Thursday, 29 September 2022",
       "id": 4,
-      "ModifiedDate": "Friday, 30 September 2022"
+      "ModifiedDate": "Tuesday, 15 November 2022"
     },
     {
       "firstName": "Bojan",
@@ -53,30 +53,30 @@
       "lastName": "Pavlovic",
       "userType": "Internship",
       "city": "Vrsac",
-      "adress": "Banatska 33",
+      "adress": "Banatska 31",
       "createdDate": "Thursday, 29 September 2022",
       "id": 6,
-      "ModifiedDate": "Wednesday, 5 October 2022"
+      "ModifiedDate": "Tuesday, 15 November 2022"
     },
     {
       "firstName": "Nikola",
       "lastName": "Nikolic",
       "userType": "Unemployed",
       "city": "Beograd",
-      "adress": "Kralja Milana 33",
+      "adress": "Kralja Milana 31",
       "createdDate": "Wednesday, 12 October 2022",
       "id": 7,
-      "ModifiedDate": "Tuesday, 1 November 2022"
+      "ModifiedDate": "Tuesday, 15 November 2022"
     },
     {
       "firstName": "Ivana",
       "lastName": "Lukic",
       "userType": "Unemployed",
       "city": "Beograd",
-      "adress": "Ratka Mitrovica 12",
+      "adress": "Ratka Mitrovica 125",
       "createdDate": "Thursday, 15 September 2022",
       "id": 8,
-      "ModifiedDate": "Friday, 30 September 2022"
+      "ModifiedDate": "Tuesday, 15 November 2022"
     },
     {
       "firstName": "Branka",
@@ -257,20 +257,20 @@
       "lastName": "Pavlovic",
       "userType": "Internship",
       "city": "Vrsac",
-      "adress": "Banatska 33",
+      "adress": "Banatska 31",
       "createdDate": "Thursday, 29 September 2022",
       "id": 27,
-      "ModifiedDate": "Wednesday, 5 October 2022"
+      "ModifiedDate": "Tuesday, 15 November 2022"
     },
     {
       "firstName": "Nikola",
       "lastName": "Nikolic",
       "userType": "Unemployed",
       "city": "Beograd",
-      "adress": "Kralja Milana 33",
+      "adress": "Kralja Milana 322",
       "createdDate": "Wednesday, 12 October 2022",
       "id": 28,
-      "ModifiedDate": "Tuesday, 1 November 2022"
+      "ModifiedDate": "Tuesday, 15 November 2022"
     },
     {
       "firstName": "Ivana",
@@ -417,25 +417,6 @@
       "createdDate": "Thursday, 15 September 2022",
       "id": 43,
       "ModifiedDate": "Friday, 30 September 2022"
-    },
-    {
-      "firstName": "Branka",
-      "lastName": "Lukic",
-      "userType": "Employed",
-      "city": "Pancevo",
-      "adress": "Bratstva i Jedinstva 43",
-      "createdDate": "Thursday, 15 September 2022",
-      "id": 44,
-      "ModifiedDate": "Friday, 16 September 2022"
-    },
-    {
-      "firstName": "Marko",
-      "lastName": "Selmic",
-      "userType": "Employed",
-      "city": "Novi Sad",
-      "adress": "Radnicka 2",
-      "createdDate": "Friday, 16 September 2022",
-      "id": 45
     }
   ]
 }

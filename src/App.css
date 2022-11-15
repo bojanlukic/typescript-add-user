@@ -1,145 +1,5 @@
-/* -----------person--------------- */
-.persons {
-  width: 1145px;
-  height: 1000px;
-  text-align: left;
-  margin: 30px 55px;
-}
-table {
-  margin-top: 27px;
-  border-collapse: collapse;
-  box-shadow: 1px 3px 7px rgb(192, 192, 192);
-}
-td,
-th {
-  padding: 13px 10px;
-}
-th {
-  background: rgb(219, 247, 245);
-  color: rgb(0, 0, 0);
-  font-weight: 900;
-  font-size: 20px;
-}
-tr:nth-child(even) {
-  background: rgb(219, 247, 245);
-}
-tr:hover {
-  background-color: rgb(68, 179, 151);
-  color: rgb(255, 255, 255);
-}
-.inputName {
-  font-size: 16px;
-  padding: 2px;
-  width: 160px;
-  height: 19px;
-  border-radius: 5px;
-  border: 2px solid rgb(0, 0, 0);
-}
-.selectUsertype {
-  border-radius: 5px;
-  border: 2px solid rgb(0, 0, 0);
-  font-size: 12px;
-  padding: 3px;
-}
-.alignSearchBar {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.buttonBox {
-  display: flex;
-  gap: 13px;
-  width: 54%;
-}
-#buttonNewUser {
-  margin-left: auto;
-}
-.buttonsForSearch {
-  cursor: pointer;
-  padding: 5px 7px;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  border-radius: 5px;
-  border: none;
-  transition: all 0.3s ease;
-  font-weight: bold;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-.buttonsForSearch:hover {
-  background-color: rgb(68, 179, 151);
-}
-span {
-  display: flex;
-  align-items: center;
-}
-.btnAction {
-  display: flex;
-  align-items: center;
-  height: 29px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgb(231, 227, 227);
-  font-size: 15px;
-  font-weight: 600;
-}
-#btnEdit:hover {
-  background-color: rgb(4, 226, 52);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-#btnDelete:hover {
-  background-color: rgb(252, 17, 17);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-.info {
-  margin-top: 15px;
-}
-.alignAction {
-  text-align: center;
-  column-span: 2;
-}
-.navPage {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  margin-top: 50px;
-}
-.navPage button.active {
-  font-weight: 900;
-  background-color: mediumblue;
-  color: white;
-  border-radius: 5px;
-}
-#btnPage {
-  padding: 10px 13px;
-  border: none;
-  font-size: medium;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 50px;
-}
-.buttonsForNav {
-  border: 2px solid mediumblue;
-  padding: 0px 12px;
-  font-size: medium;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.buttonsForNav:hover,
-#btnPage:hover {
-  background-color: mediumblue;
-  color: white;
-}
-.buttonsForNav:disabled {
-  border: 2px solid silver;
-}
-
 /* ---------------App-------------- */
+
 .app {
   display: flex;
   flex-direction: column;
@@ -162,21 +22,200 @@ header {
 /* ------------Navbar------------ */
 
 nav{
-    background-color: rgb(68, 179, 151);
-    display: flex;
-    flex-direction: column;
-    box-shadow: 1px 3px 7px rgb(192, 192, 192);
-    height: 1100px;
-    width: 140px;
+  background-color: rgb(68, 179, 151);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 3px 7px rgb(192, 192, 192);
+  height: 1100px;
+  width: 140px;
 }
 nav a {
-    text-decoration: none;
-    padding: 20px;
-    color: white;
+  text-decoration: none;
+  padding: 20px;
+  color: white;
 }
 nav a:hover{
-    background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 nav a.active{
-    background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+font-weight: 900;
 }
+
+/* -----------Home--------------- */
+
+.persons {
+  width: 1194px;
+  height: 1000px;
+  text-align: left;
+  margin: 30px 0 10px 55px;
+}
+table {
+  margin-top: 27px;
+  border-collapse: collapse;
+  box-shadow: 1px 3px 7px rgb(192, 192, 192);
+}
+td,
+th {
+  padding: 6px 16px;
+}
+th {
+  background: rgb(219, 247, 245);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+tr:nth-child(even) {
+  background: rgb(219, 247, 245);
+}
+tr:hover {
+  background-color: rgb(68, 179, 151);
+  color: rgb(255, 255, 255);
+}
+.inputName {
+  font-size: 16px;
+  padding: 2px;
+  width: 160px;
+  height: 19px;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0);
+}
+.selectUsertype {
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: 14px;
+  padding: 3px;
+}
+.alignSearchBar {
+  display: flex;
+  align-items: center;
+}
+.buttonBox {
+  display: flex;
+}
+.newUserBox{
+margin-left: auto;
+}
+.buttonsForSearch {
+  cursor: pointer;
+  padding: 6px 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.buttonsForSearch:hover {
+  background-color: rgb(68, 179, 151);
+}
+span {
+  display: flex;
+  align-items: center;
+}
+.btnAction {
+  display: flex;
+  align-items: center;
+  height: 29px;
+  width: 49px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(231, 227, 227);
+  font-size: 15px;
+  font-weight: 600;
+}
+#btnEdit,#btnDelete{
+ display: flex;
+ justify-content: center;
+}
+#btnEdit:hover {
+  background-color: rgb(4, 226, 52);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+#btnDelete:hover {
+  background-color: rgb(252, 17, 17);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.info {
+  margin-top: 15px;
+}
+.alignAction {
+  text-align: center;
+}
+.navPage {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 50px;
+}
+.navPage button.active {
+  font-weight: 900;
+  background-color: mediumblue;
+  color: white;
+  border-radius: 5px;
+}
+#btnPage {
+  padding: 5px 10px;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.buttonsForNav {
+  border: 2px solid mediumblue;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.buttonsForNav:hover,
+#btnPage:hover {
+  background-color: mediumblue;
+  color: white;
+}
+.buttonsForNav:disabled {
+  border: 2px solid silver;
+}
+
+/* ---------------AddUser & EditUser------------- */
+
+.container {
+  padding-left: 50px;
+  text-align: left;
+}
+.inputs {
+  width: 180px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+ .btnConfirm {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 2px solid rgb(0,0,0);
+  transition: all 0.3s ease;
+  margin: 8px 10px 0 0;
+  font-weight: 600;
+} 
+.btnConfirm:hover {
+  background-color: rgb(68, 179, 151);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(68, 179, 151);
+} 
+.btnConfirm:disabled {
+  border: 2px solid silver;
+  background-color: white;
+  color: silver;
+}
+
