@@ -8,8 +8,8 @@ type Person = {
   city: string;
   adress: string;
 };
-function EditUser() {
-  let { id } = useParams();
+const EditUser = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
   const [state, setState] = useState<Person>({
     firstName: "",
@@ -24,7 +24,7 @@ function EditUser() {
      // eslint-disable-next-line
   }, [id]);
   
-  const fetchUser = (id: any) => {
+  const fetchUser = (id : any) => {
     fetch(`http://localhost:3000/PERSON/${id}`)
       .then(res => res.json())
       .then(data => {
@@ -36,13 +36,21 @@ function EditUser() {
       .catch((err) => console.log("Greska pri ucitavanju URL-a", err));
   }
   
-  const handleChange = (e : any) => {
-    const { name, value } = e.target;
+  const handleChange = (event : any) => {
+    const { name, value } = event.target;
     setState({
       ...state,
       [name]: value
     });
   };
+
+  // const handleChange = (event : React.ChangeEvent<HTMLInputElement>) : void => {
+  //   const { name, value } = event.target;
+  //   setState({
+  //     ...state,
+  //     [name]: value,
+  //   });
+  // }
 
   const editOnClick = () => {
     type Options = {
@@ -58,8 +66,8 @@ function EditUser() {
       month: "long",
       day: "numeric",
     };
-    const date = new Date();
-    const dateFormated = date.toLocaleString("en-GB", options);
+    const date : Date = new Date();
+    const dateFormated : string = date.toLocaleString("en-GB", options);
     
     fetch(`http://localhost:3000/PERSON/${id}`, {
       method: 'PUT',

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Home() {
+const Home = () => {
   const navigate = useNavigate();
   const [persons, setPersons] = useState<any[]>([]);
   const [name, setName] = useState<string>("");
   const [position, setPosition] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postsPerPage] = useState<number>(10);
-  
+
   useEffect(() => {
     refresh();
   }, []);
@@ -19,57 +19,58 @@ function Home() {
       .then((data) => setPersons(data));
   };
 
-
   const searchOnClick = () => {
-    const filteredPersons = persons.filter(
-      (item) => item.firstName.toLowerCase().startsWith(name.toLowerCase()) && item.userType.includes(position)
-    )
-    setPersons(filteredPersons)
+    const filteredPersons: string[] = persons.filter(
+      (item) =>
+        item.firstName.toLowerCase().startsWith(name.toLowerCase()) &&
+        item.userType.includes(position)
+    );
+    setPersons(filteredPersons);
     if (!name && !position) {
       refresh();
     }
-  }
+  };
   const clearOnClick = () => {
-    setName('');
-    setPosition('');
-  }
-  
+    setName("");
+    setPosition("");
+  };
+
   const deletePerson = (id: number) => {
     fetch(`http://localhost:3000/PERSON/${id}`, {
-      method: 'DELETE'
+      method: "DELETE",
     })
-      .then(res => res.json())
-      .then(data => {
-        console.log(`Uspesno obrisana osoba ${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(`Uspesno obrisana osoba ${id}`);
         refresh();
       })
       .catch((err) => console.log("Greska pri ucitavanju URL-a", err));
-  }
+  };
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPost = persons.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastPost: number = currentPage * postsPerPage;
+  const indexOfFirstPost: number = indexOfLastPost - postsPerPage;
+  const currentPost: any[] = persons.slice(indexOfFirstPost, indexOfLastPost);
 
-  const pageNumbers : number[] = [];
+  const pageNumbers: number[] = [];
   for (let i = 1; i <= Math.ceil(persons.length / postsPerPage); i++)
     pageNumbers.push(i);
-  
+
   const firstButton = () => {
-    setCurrentPage(pageNumbers[0])
+    setCurrentPage(pageNumbers[0]);
   };
   const backButton = () => {
     if (currentPage > 0) {
-      setCurrentPage(currentPage - 1)
+      setCurrentPage(currentPage - 1);
     }
-  }
+  };
   const nextButton = () => {
     if (pageNumbers.length > currentPage) {
-      setCurrentPage(currentPage + 1)
+      setCurrentPage(currentPage + 1);
     }
-  }
+  };
   const lastButton = () => {
-    setCurrentPage(pageNumbers.length)
-  }
+    setCurrentPage(pageNumbers.length);
+  };
 
   return (
     <div className="persons">
@@ -102,23 +103,19 @@ function Home() {
           &nbsp; &nbsp;
         </div>
         <div className="buttonBox">
-          <button
-            className="buttonsForSearch"
-          onClick={searchOnClick}
-          >
-            Search</button>
+          <button className="buttonsForSearch" onClick={searchOnClick}>
+            Search
+          </button>
           &nbsp;
-          <button
-            className="buttonsForSearch"
-          onClick={clearOnClick}
-          >
-            Clear</button>
+          <button className="buttonsForSearch" onClick={clearOnClick}>
+            Clear
+          </button>
         </div>
         <div className="newUserBox">
           <button
             className="buttonsForSearch"
             id="buttonNewUser"
-          onClick={() => navigate ("/add")}
+            onClick={() => navigate("/add")}
           >
             Add User
           </button>
@@ -180,7 +177,7 @@ function Home() {
         <button
           className="buttonsForNav"
           onClick={firstButton}
-          disabled= {currentPage === 1}
+          disabled={currentPage === 1}
         >
           First
         </button>
@@ -199,7 +196,9 @@ function Home() {
                 key={page}
                 id="btnPage"
                 className={page === currentPage ? "active" : ""}
-                onClick={() => { setCurrentPage(page) }}
+                onClick={() => {
+                  setCurrentPage(page);
+                }}
               >
                 {page}
               </button>
@@ -209,11 +208,13 @@ function Home() {
         <button
           className="buttonsForNav"
           onClick={nextButton}
-          disabled = {currentPage === pageNumbers.length}
-        >Next</button>
+          disabled={currentPage === pageNumbers.length}
+        >
+          Next
+        </button>
         <button
-         className="buttonsForNav"
-         onClick={lastButton}
+          className="buttonsForNav"
+          onClick={lastButton}
           disabled={currentPage === pageNumbers.length}
         >
           Last
@@ -221,6 +222,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

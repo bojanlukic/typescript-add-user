@@ -8,8 +8,7 @@ type Person = {
   city: string;
   adress: string
 }
-
-function AddUser() {
+const AddUser = () => {
   const navigate = useNavigate();
   const [state, setState] = useState<Person>({
     firstName: '',
@@ -20,8 +19,8 @@ function AddUser() {
   })
   
   
-  const handleChange = (e : any) : void => {
-    const { name, value } = e.target;
+  const handleChange = (event : any) => {
+    const { name, value } = event.target;
     setState({
       ...state,
       [name]: value,
@@ -51,8 +50,8 @@ function AddUser() {
       month: "long",
       day: "numeric",
     };
-    const date = new Date();
-    const dateFormated = date.toLocaleString("en-GB" , options);
+    const date : Date = new Date();
+    const dateFormated : string = date.toLocaleString("en-GB" , options);
 
     fetch("http://localhost:3000/PERSON/", {
       method: "POST",
@@ -66,7 +65,7 @@ function AddUser() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("Uspesno dodata osoba");
+        console.log("Uspesno dodata osoba" , );
         navigate("/");
       })
       .catch((err) => console.log("Greska",err));
